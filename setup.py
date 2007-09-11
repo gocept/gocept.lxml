@@ -2,17 +2,21 @@
 # See also LICENSE.txt
 # $Id$
 
+import os
+
 from setuptools import setup, find_packages
 
 setup(
     name = 'gocept.lxml',
-    version = "0.1",
+    version = "0.2",
     author = "Christian Zagrodnick",
     author_email = "cz@gocept.com",
     description = "Primarily proivdes zope3 interface definitions for lxml",
-    long_description = "XXX",
+    long_description = file(os.path.join(
+        os.path.dirname(__file__), 'src', 'gocept', 'lxml', 'README.txt')
+        ).read(),
     license = "ZPL 2.1",
-    url='https://svn.gocept.com/repos/gocept/gocept.lxml',
+    url='http://pypi.python.org/pypi/gocept.lxml',
 
     packages = find_packages('src'),
     package_dir = {'': 'src'},
@@ -25,11 +29,11 @@ setup(
         'setuptools',
         'zope.interface',
         'zope.app.component',
-        'lxml',
+        'lxml<2.0-dev',
     ],
     extras_require = dict(
         test=['zope.testing',
-              'zope.app.testing', 
+              'zope.app.testing',
              ],
     ),
     )
