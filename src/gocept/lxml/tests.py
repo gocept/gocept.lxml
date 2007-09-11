@@ -10,7 +10,7 @@ import zope.app.testing.functional
 
 GoceptLxmlLayer = zope.app.testing.functional.ZCMLLayer(
     os.path.join(os.path.dirname(__file__), 'ftesting.zcml'),
-    __name__, 'ArticleLayer', allow_teardown=True)
+    __name__, 'GoceptLxmlLayer', allow_teardown=True)
 
 
 def test_suite():
