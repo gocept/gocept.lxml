@@ -20,7 +20,4 @@ XML = fromstring
 
 
 def fromfile(handle):
-    # there seems to be a bug in lxml.etree which doesn't take the parser into
-    # account. Yikes.
-    handle.seek(0)
-    return fromstring(handle.read())
+    return lxml.etree.parse(handle, objectify_parser).getroot()
