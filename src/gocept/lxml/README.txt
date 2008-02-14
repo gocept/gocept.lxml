@@ -67,3 +67,11 @@ For convinience `fromstring` is also defined in `gocept.lxml.objectify`:
 <Element a at ...>
 >>> gocept.lxml.interfaces.IObjectified.providedBy(xml)
 True
+
+Changes
+=======
+
+0.2.1 (2008-02-14)
+++++++++++++++++++
+
+- Lifted dependency on lxml<2.0dev so lxml 2 can be used now.
