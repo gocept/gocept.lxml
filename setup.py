@@ -8,7 +8,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = 'gocept.lxml',
-    version = "0.2",
+    version = "0.2.1dev",
     author = "Christian Zagrodnick",
     author_email = "cz@gocept.com",
     description = "Primarily proivdes zope3 interface definitions for lxml",
@@ -29,7 +29,7 @@ setup(
         'setuptools',
         'zope.interface',
         'zope.app.component',
-        'lxml<2.0-dev',
+        'lxml',
     ],
     extras_require = dict(
         test=['zope.testing',
